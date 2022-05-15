@@ -1,1 +1,20 @@
-<p>filmdetail works!</p>
+<div class="card-columns" *ngIf="film">
+    <div class="card">
+        <div class="row">
+            <div class="col-3 center">
+                <img class="card-img-top" src="{{film | filmimg}}" alt="Card image cap">
+                <h6 class="card-title">{{film.tagline}}</h6>
+            </div>
+            <div class="col-9">
+                <div class="card-body">
+                    <h4 class="card-title">{{film.title}}</h4>
+                    <p class="card-title">Nombre original: {{film.original_title}}</p>
+                    <p class="card-text">{{film.overview}}</p>
+                    <p class="card-text">Tiempo duracion: {{film.runtime}}</p>
+                    <p class="card-text">Puntuacion: {{film.vote_average}}</p>
+                    <button type="button" class="btn btn-outline-secondary" [routerLink]="['/films']">Atras</button>
+                  </div>
+            </div>
+          </div>
+    </div>
+  </div>

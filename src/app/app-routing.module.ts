@@ -1,4 +1,4 @@
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { FilmsComponent } from './components/films/films.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -7,7 +7,7 @@ import { FilmdetailComponent } from './components/filmdetail/filmdetail.componen
 const routes: Routes = [
   
   { path: 'films', component: FilmsComponent },
-  { path: 'filmdetail', component: FilmdetailComponent },
+  { path: 'filmdetail/:id', component: FilmdetailComponent },
   { path: '',   redirectTo: '/films', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
