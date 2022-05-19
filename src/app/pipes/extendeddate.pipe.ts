@@ -4,9 +4,9 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'extendeddate',
 })
 export class ExtendeddatePipe implements PipeTransform {
-  transform(value: string, ...args: unknown[]): string {
-    let newDate = new Date(value);
-    let mes_num = newDate.getMonth() + 1;
+  transform(value: Date, ...args: unknown[]): string {
+    const date = new Date(value);
+    let mes_num = date.getMonth() + 1;
     var mes = '';
     switch (mes_num) {
       case 1: {
@@ -69,6 +69,6 @@ export class ExtendeddatePipe implements PipeTransform {
         break;
       }
     }
-    return newDate.getDate() + ' de ' + mes + ' de ' + newDate.getFullYear();
+    return date.getDate() + ' de ' + mes + ' de ' + date.getFullYear();
   }
 }

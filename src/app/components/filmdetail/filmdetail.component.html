@@ -2,8 +2,9 @@
     <div class="card">
         <div class="row">
             <div class="col-3 center">
-                <img class="card-img-top" src="{{film | filmimg}}" alt="Card image cap">
-                <h6 class="card-title">{{film.tagline}}</h6>
+                <img class="card-img-top" src="{{film.poster_path | posterimg}}" alt="Card image cap">
+                
+                <b><i>{{film.tagline}}</i></b>
             </div>
             <div class="col-9">
                 <div class="card-body">

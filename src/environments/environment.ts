@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  BASE_URL: 'https://api.themoviedb.org/3/'
+  BASE_URL: 'https://api.themoviedb.org/3/',
+  BASE_URL_IMG: 'http://image.tmdb.org/t/p/w500',
 };
 
 /*

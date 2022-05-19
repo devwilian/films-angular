@@ -5,11 +5,11 @@
 </div>
 <br>
 <div class="card-columns" *ngIf="films">
-    <div *ngIf="films.results!=0">
-        <div class="card" *ngFor="let film of films.results">
+    <div *ngIf="films.length!=0">
+        <div class="card" *ngFor="let film of films">
             <div class="row">
                 <div class="col-3">
-                    <img class="card-img-top" src="{{film | filmimg}}" alt="Card image cap">
+                    <img class="card-img-top" src="{{film.backdrop_path | filmimg}}" alt="Card image cap">
                 </div>
                 <div class="col-9">
                     <div class="card-body">
@@ -22,7 +22,7 @@
               </div>
         </div>
     </div>
-    <div *ngIf="films.results==0">
+    <div *ngIf="films.length==0">
         <div class="card">
             <div class="row">
                 <div class="col-12">

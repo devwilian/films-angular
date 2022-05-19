@@ -1,12 +1,15 @@
 import { environment } from './../../environments/environment';
 import { Pipe, PipeTransform } from '@angular/core';
 import { FilmResult } from '../interfaces/listfilms.interface';
+
 const URL_IMG = environment.BASE_URL_IMG;
+
 @Pipe({
-  name: 'filmimg',
+  name: 'posterimg',
 })
-export class FilmimgPipe implements PipeTransform {
-  transform(value: string, ...args: unknown[]): any {
+export class PosterimgPipe implements PipeTransform {
+  transform(value: string, ...args: unknown[]): string {
+    console.log(value);
     if (value) {
       return URL_IMG + value;
     } else {

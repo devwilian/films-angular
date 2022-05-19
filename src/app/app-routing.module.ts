@@ -1,19 +1,10 @@
-import { PageNotFoundComponent } from './components/pagenotfound/pagenotfound.component';
-import { FilmsComponent } from './components/films/films.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FilmdetailComponent } from './components/filmdetail/filmdetail.component';
 
-const routes: Routes = [
-  
-  { path: 'films', component: FilmsComponent },
-  { path: 'filmdetail/:id', component: FilmdetailComponent },
-  { path: '',   redirectTo: '/films', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent }
-];
+const routes: Routes = [{ path: '', redirectTo: '/films', pathMatch: 'full' }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
